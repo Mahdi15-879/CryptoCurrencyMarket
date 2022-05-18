@@ -1,0 +1,21 @@
+.Navbar {
+  background-color: #1d1e65;
+  width: 100%;
+  height: 4.5rem;
+}
+
+.Navbar nav {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.Navbar nav h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+}
