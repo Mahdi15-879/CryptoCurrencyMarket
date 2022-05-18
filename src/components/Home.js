@@ -1,27 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 
-// API
-import {getProducts} from "../services/api"
+// Components
+import Table from "./Table";
 
 const Home = () => {
-    const [data, setData] = useState([]);
-    const [load, setLoad] = useState(true);
-
-    useEffect(() => {
-        const fetchAPI = async () => {
-            setData(await getProducts());
-            setLoad(false);
-          };
-      
-          fetchAPI();
-          
-    }, []);
-
-    return(
-        <div className='Home'>
-
-        </div>
-    )
-}
+  return (
+    <div className="Home">
+      <h1>CryptoCurrencies</h1>
+      <Table />
+    </div>
+  );
+};
 
 export default Home;
