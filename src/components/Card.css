@@ -1,0 +1,66 @@
+.Card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1c1c6a;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.Card span:nth-child(1) {
+  display: flex;
+  align-items: center;
+  width: 28%;
+}
+
+.Card span:nth-child(2) {
+  width: 30%;
+}
+
+.Card span:nth-child(3) {
+  width: 5%;
+  text-align: center;
+}
+
+.Card span:nth-child(1) figure {
+  margin: 0;
+  margin-right: 0.8rem;
+  width: 30px;
+  height: 30px;
+}
+
+.Card span:nth-child(1) figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.Card span:nth-child(1) h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-right: 0.5rem !important;
+}
+
+.Card span:nth-child(1) h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #cfd5d37d;
+}
+
+.Card span:nth-child(1) h2,
+.Card span:nth-child(1) h3 {
+  margin: 0;
+}
+
+.greenPriceChange {
+  background-color: #02c076;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+}
+
+.redPriceChange {
+  background-color: #f84960;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+}

@@ -15,8 +15,10 @@ const Card = ({ image, title, symbol, price, change }) => {
         <h2>{symbol}</h2>
         <h3>{title}</h3>
       </span>
-      <h4>{price}</h4>
-      <h5>{change.toFixed(2)}%</h5>
+      <span>${Number(price).toLocaleString()}</span>
+      <span className={change > 0 ? "greenPriceChange" : "redPriceChange"}>
+        {change.toFixed(2)}%
+      </span>
     </div>
   );
 };

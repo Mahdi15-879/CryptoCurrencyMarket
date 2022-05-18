@@ -12,6 +12,7 @@ import "./Table.css";
 const Table = () => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(true);
+  const [page, setPage] = useState(20);
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -24,17 +25,40 @@ const Table = () => {
 
   return (
     <div className="Table">
+      <div className="Table-header">
+        <h3>Name</h3>
+        <h3>Price</h3>
+        <h3>24h Change</h3>
+      </div>
       {load ? (
-        <h1>Loading...</h1>
+        <h1 className="Loading">Loading...</h1>
       ) : (
-        <Card
-          image={data.results[0].currency1.image}
-          title={data.results[0].currency1.title}
-          symbol={data.results[0].currency1.code}
-          price={data.results[0].price_info.price}
-          change={data.results[0].price_info.change}
-        />
+        data.results.map((crypto, index) => {
+          if (index <= page) {
+            return (
+              <Card
+                key={crypto.id}
+                image={crypto.currency1.image}
+                title={crypto.currency1.title}
+                symbol={crypto.currency1.code}
+                price={crypto.price_info.price}
+                change={crypto.price_info.change}
+              />
+            );
+          } else {
+            return false;
+          }
+        })
       )}
+      <div className="next-btn">
+        <button
+          onClick={() => {
+            setPage(page + 20);
+          }}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 };

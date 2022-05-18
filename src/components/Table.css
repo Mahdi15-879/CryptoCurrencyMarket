@@ -1,0 +1,47 @@
+.Table {
+  width: 85%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.Table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131353;
+  border-radius: 5px;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0.2rem;
+}
+
+.Table-header h3 {
+  color: #fff;
+  font-weight: 300;
+}
+
+.Loading {
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+  margin: 5rem 0;
+}
+
+.next-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.next-btn button {
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: 0.3rem 1.2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+  background-color: #1c1c6a;
+  color: #fff;
+  border: none;
+  font-family: "Poppins";
+  font-weight: 300;
+}
