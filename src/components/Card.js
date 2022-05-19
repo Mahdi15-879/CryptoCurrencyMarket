@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Icons
 
 // Styles
 import "./Card.css";
 
-const Card = ({ image, title, symbol, price, change }) => {
+const Card = ({ image, title, symbol, price, change, addCookiesHandler }) => {
   return (
     <div className="Card">
       <span>
@@ -19,6 +19,7 @@ const Card = ({ image, title, symbol, price, change }) => {
       <span className={change > 0 ? "greenPriceChange" : "redPriceChange"}>
         {change.toFixed(2)}%
       </span>
+      <button onClick={() => addCookiesHandler(title)}>Add to fav</button>
     </div>
   );
 };

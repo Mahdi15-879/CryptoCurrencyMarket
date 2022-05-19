@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useCookies } from "react-cookie";
 
 // API
 import { getProducts } from "../services/api";
@@ -13,6 +14,9 @@ const Table = () => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(true);
   const [page, setPage] = useState(20);
+  const [favoriteCurrencies, setFavoriteCurrencies] = useState([]);
+
+  const [cookies, setCookie] = useCookies([{}]);
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -22,6 +26,14 @@ const Table = () => {
 
     fetchAPI();
   }, []);
+
+  useEffect(() => {
+    setCookie("Name", `${favoriteCurrencies}`, { path: "/" });
+  }, [favoriteCurrencies]);
+
+  const addCookiesHandler = (title) => {
+    setFavoriteCurrencies([...favoriteCurrencies, title]);
+  };
 
   return (
     <div className="Table">
@@ -43,6 +55,7 @@ const Table = () => {
                 symbol={crypto.currency1.code}
                 price={crypto.price_info.price}
                 change={crypto.price_info.change}
+                addCookiesHandler={addCookiesHandler}
               />
             );
           } else {
