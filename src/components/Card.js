@@ -16,10 +16,14 @@ const Card = ({ image, title, symbol, price, change, addCookiesHandler }) => {
         <h3>{title}</h3>
       </span>
       <span>${Number(price).toLocaleString()}</span>
-      <span className={change > 0 ? "greenPriceChange" : "redPriceChange"}>
-        {change.toFixed(2)}%
+      <span>
+        <button onClick={() => addCookiesHandler(title, image)}>
+          Add to fav
+        </button>
+        <span className={change > 0 ? "greenPriceChange" : "redPriceChange"}>
+          {change.toFixed(2)}%
+        </span>
       </span>
-      <button onClick={() => addCookiesHandler(title)}>Add to fav</button>
     </div>
   );
 };

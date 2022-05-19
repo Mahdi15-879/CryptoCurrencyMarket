@@ -10,12 +10,24 @@
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: space-between;
 }
 
-.Navbar nav h1 {
+.title {
+  text-decoration: none;
   margin: 0;
   color: #fff;
   font-size: 2rem;
   font-weight: 500;
+}
+
+.Favorite {
+  text-decoration: none;
+  margin: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: #050846;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
 }

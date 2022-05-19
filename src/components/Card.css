@@ -10,16 +10,31 @@
 .Card span:nth-child(1) {
   display: flex;
   align-items: center;
-  width: 28%;
-}
-
-.Card span:nth-child(2) {
   width: 30%;
 }
 
+.Card span:nth-child(2) {
+  width: 25%;
+}
+
 .Card span:nth-child(3) {
-  width: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15%;
   text-align: center;
+}
+
+.Card span:nth-child(3) button {
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.3rem 1.2rem;
+  border-radius: 10px;
+  background-color: #1c1c6a;
+  color: #fff;
+  border: none;
+  font-family: "Poppins";
+  font-weight: 300;
 }
 
 .Card span:nth-child(1) figure {

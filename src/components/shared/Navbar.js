@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Styles
 import "./Navbar.css";
@@ -7,7 +8,12 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <nav>
-        <h1>BitPin</h1>
+        <Link className="title" to="/">
+          BitPin
+        </Link>
+        <Link className="Favorite" to="/favorites">
+          Wishlist
+        </Link>
       </nav>
     </div>
   );

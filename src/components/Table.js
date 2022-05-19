@@ -14,7 +14,8 @@ const Table = () => {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(true);
   const [page, setPage] = useState(20);
-  const [favoriteCurrencies, setFavoriteCurrencies] = useState([]);
+  const [favoriteCurrenciesName, setFavoriteCurrenciesName] = useState([]);
+  const [favoriteCurrenciesImage, setFavoriteCurrenciesImage] = useState([]);
 
   const [cookies, setCookie] = useCookies([{}]);
 
@@ -28,11 +29,13 @@ const Table = () => {
   }, []);
 
   useEffect(() => {
-    setCookie("Name", `${favoriteCurrencies}`, { path: "/" });
-  }, [favoriteCurrencies]);
+    setCookie("Names", `${favoriteCurrenciesName}`, { path: "/" });
+    setCookie("Images", `${favoriteCurrenciesImage}`, { path: "/" });
+  }, [favoriteCurrenciesName, favoriteCurrenciesImage]);
 
-  const addCookiesHandler = (title) => {
-    setFavoriteCurrencies([...favoriteCurrencies, title]);
+  const addCookiesHandler = (title, image) => {
+    setFavoriteCurrenciesName([...favoriteCurrenciesName, title]);
+    setFavoriteCurrenciesImage([...favoriteCurrenciesImage, image]);
   };
 
   return (
