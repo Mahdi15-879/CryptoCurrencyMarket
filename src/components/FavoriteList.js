@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
-
-// Components
+import { v4 as uuidv4 } from "uuid";
 
 // Styles
 import "./FavoriteList.css";
@@ -12,10 +11,6 @@ const FavoriteList = () => {
   const [load, setLoad] = useState(true);
 
   const [cookies, setCookie] = useCookies([]);
-
-  useEffect(() => {
-    console.log(namesFromCookie);
-  }, [load]);
 
   useEffect(() => {
     const fetchAPI = async () => {
@@ -36,7 +31,7 @@ const FavoriteList = () => {
           <span className="FavoriteList__row-1">
             {imagesFromCookie.map((image, index) => {
               return (
-                <figure key={index}>
+                <figure key={uuidv4()}>
                   <img src={image} />
                 </figure>
               );
@@ -44,7 +39,7 @@ const FavoriteList = () => {
           </span>
           <span className="FavoriteList__row-2">
             {namesFromCookie.map((name) => {
-              return <h2 key={name}>{name}</h2>;
+              return <h2 key={uuidv4()}>{name}</h2>;
             })}
           </span>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
+import { v4 as uuidv4 } from "uuid";
 
 // API
 import { getProducts } from "../services/api";
@@ -52,7 +53,7 @@ const Table = () => {
           if (index <= page) {
             return (
               <Card
-                key={crypto.id}
+                key={uuidv4()}
                 image={crypto.currency1.image}
                 title={crypto.currency1.title}
                 symbol={crypto.currency1.code}

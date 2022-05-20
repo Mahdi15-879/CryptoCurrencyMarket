@@ -1,4 +1,4 @@
-.Card {
+.Card__row-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7,25 +7,31 @@
   color: #fff;
 }
 
-.Card span:nth-child(1) {
+.Card .Card__row-1 span:nth-child(1) {
   display: flex;
   align-items: center;
-  width: 30%;
+  width: 31%;
 }
 
-.Card span:nth-child(2) {
-  width: 25%;
+.Card .Card__row-1 span:nth-child(2) {
+  width: 18%;
 }
 
-.Card span:nth-child(3) {
+.Card .Card__row-1 span:nth-child(3) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 15%;
-  text-align: center;
+  width: 22%;
 }
 
-.Card span:nth-child(3) button {
+.Card .Card__row-1 span:nth-child(3) span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+}
+
+.Card .Card__row-1 span:nth-child(3) button {
   font-size: 0.8rem;
   cursor: pointer;
   padding: 0.3rem 1.2rem;
@@ -37,32 +43,32 @@
   font-weight: 300;
 }
 
-.Card span:nth-child(1) figure {
+.Card .Card__row-1 span:nth-child(1) figure {
   margin: 0;
   margin-right: 0.8rem;
   width: 30px;
   height: 30px;
 }
 
-.Card span:nth-child(1) figure img {
+.Card .Card__row-1 span:nth-child(1) figure img {
   width: 100%;
   height: 100%;
 }
 
-.Card span:nth-child(1) h2 {
+.Card .Card__row-1 span:nth-child(1) h2 {
   font-size: 1.3rem;
   font-weight: 500;
   margin-right: 0.5rem !important;
 }
 
-.Card span:nth-child(1) h3 {
+.Card .Card__row-1 span:nth-child(1) h3 {
   font-size: 0.8rem;
   font-weight: 400;
   color: #cfd5d37d;
 }
 
-.Card span:nth-child(1) h2,
-.Card span:nth-child(1) h3 {
+.Card .Card__row-1 span:nth-child(1) h2,
+.Card .Card__row-1 span:nth-child(1) h3 {
   margin: 0;
 }
 
@@ -78,4 +84,108 @@
   font-size: 0.9rem;
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
+}
+
+.History {
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.3rem 1.2rem;
+  border-radius: 10px;
+  background-color: #1c1c6a;
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 300;
+}
+
+.HistoryExpand {
+  background-color: #1c1c6a;
+  border-radius: 0 0 10px 10px;
+  padding: 1rem 1rem;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.HistoryCompact {
+  display: none;
+}
+
+.History__row-1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.History__col-1 span {
+  display: flex;
+  align-items: center;
+}
+
+.History__col-1 span figure {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  margin-right: 0.8rem;
+}
+
+.History__col-1 span figure img {
+  width: 100%;
+}
+
+.History__col-1 span h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #fff;
+  font-weight: 500;
+}
+
+.History__col-2 h1 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: #fff;
+  font-weight: 500;
+}
+
+.History__row-2 {
+  width: 100%;
+}
+
+.History__row-2 div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-top: 1.5rem; */
+}
+
+.History-header {
+  margin: 1.2rem 0 0rem 0;
+}
+
+.History-header h3 {
+  font-size: 1.4rem;
+  color: rgb(222, 217, 217);
+  font-weight: 400;
+  margin-bottom: 0.5rem !important;
+}
+
+.History-body {
+  border-top: 1px solid rgb(12, 13, 72);
+}
+
+.History__row-2 div h3 {
+  width: 8%;
+  margin: 0;
+}
+
+.History-body h3 {
+  margin-top: 0.5rem !important;
+  color: rgb(221, 217, 217);
+  font-weight: 300;
+}
+
+.History-body h3:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
