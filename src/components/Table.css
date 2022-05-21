@@ -45,3 +45,59 @@
   font-family: "Poppins";
   font-weight: 300;
 }
+
+.favorites {
+}
+
+.empty-favorites {
+  display: none;
+}
+
+.favorites-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.favorites-header {
+  width: 100%;
+  background-color: #131353;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0.2rem;
+}
+
+.favorites-header h1 {
+  margin: 0 0 0 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.Favorites-body {
+  display: flex;
+  align-items: center;
+}
+
+.Favorite__row-1 figure {
+  margin: 0 0.8rem 1rem 0;
+  width: 30px;
+  height: 30px;
+}
+
+.Favorite__row-1 figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.Favorite__row-2 h2 {
+  margin: 0 !important;
+  margin-bottom: 1rem !important;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+}

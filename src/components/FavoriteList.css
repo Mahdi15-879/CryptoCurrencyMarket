@@ -8,9 +8,6 @@
   margin: auto;
   display: flex;
   align-items: center;
-}
-
-.FavoriteList div {
   border-bottom: 1px solid #1c1c6a;
   margin-bottom: 1.5rem;
 }

@@ -41,6 +41,33 @@ const Table = () => {
 
   return (
     <div className="Table">
+      <div
+        className={
+          favoriteCurrenciesName.length > 0 ? "favorites" : "empty-favorites"
+        }
+      >
+        <div className="favorites-row">
+          <div className="favorites-header">
+            <h1>Favorites List</h1>
+          </div>
+          <div className="Favorites-body">
+            <span className="Favorite__row-1">
+              {favoriteCurrenciesImage.map((image) => {
+                return (
+                  <figure key={uuidv4()}>
+                    <img src={image} />
+                  </figure>
+                );
+              })}
+            </span>
+            <span className="Favorite__row-2">
+              {favoriteCurrenciesName.map((name) => {
+                return <h2 key={uuidv4()}>{name}</h2>;
+              })}
+            </span>
+          </div>
+        </div>
+      </div>
       <div className="Table-header">
         <h3>Name</h3>
         <h3>Price</h3>

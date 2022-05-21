@@ -29,7 +29,7 @@ const FavoriteList = () => {
       ) : (
         <div>
           <span className="FavoriteList__row-1">
-            {imagesFromCookie.map((image, index) => {
+            {imagesFromCookie.map((image) => {
               return (
                 <figure key={uuidv4()}>
                   <img src={image} />
